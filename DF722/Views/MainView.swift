@@ -83,27 +83,13 @@ struct MainView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        // Scroll to top with animation
-                        let generator = UIImpactFeedbackGenerator(style: .light)
-                        generator.impactOccurred()
-                        withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                            animateAppear = false
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                            withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                                animateAppear = true
-                            }
-                        }
-                    }) {
-                        HStack(spacing: 6) {
-                            Image(systemName: "sparkles")
-                                .font(.system(size: 20, weight: .bold))
-                            Text("VaultRise")
-                                .font(.system(size: 24, weight: .bold, design: .rounded))
-                        }
-                        .foregroundColor(AppTheme.accentGold)
+                    HStack(spacing: 6) {
+                        Image(systemName: "sparkles")
+                            .font(.system(size: 20, weight: .bold))
+                        Text("VaultRise")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
                     }
+                    .foregroundColor(AppTheme.accentGold)
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {

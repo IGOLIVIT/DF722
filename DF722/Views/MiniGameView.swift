@@ -2,7 +2,7 @@
 //  MiniGameView.swift
 //  DF722
 //
-//  Created by Cursor AI
+//  Created by IGOR on 28/10/2025.
 //
 
 import SwiftUI
@@ -490,4 +490,3 @@ enum GameItemType {
         MiniGameView()
     }
 }
-
